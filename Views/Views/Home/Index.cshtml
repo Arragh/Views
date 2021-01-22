@@ -1,0 +1,29 @@
+﻿@model string[]
+
+@{ Layout = "_Layout"; }
+
+@section Header
+{
+    <div class="bg-success">
+        @foreach (var str in new[] { "Home", "List", "Edit" })
+        {
+            <a class="btn btn-sm btn-primary" asp-action="str">@str</a>
+        }
+    </div>
+}
+
+@section Body
+{
+    This is the list of fruit names:
+    @foreach (var item in Model)
+    {
+        <span><b>@item</b></span>
+    }
+}
+
+@section Footer
+{
+    <div class="bg-success">
+        This is the footer
+    </div>
+}

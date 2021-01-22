@@ -17,7 +17,17 @@
     <div div class="bg-info">
         This is part of the Layout
     </div>
-    @RenderSection("Footer")
+
+    @if (IsSectionDefined("Footer"))
+    {
+        @RenderSection("Footer")
+    }
+    else
+    {
+        <h4>This is the default footer</h4>
+    }
+
+    @RenderSection("Scripts", false)
 
     <div div class="bg-info">
         This is part of the Layout

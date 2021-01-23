@@ -1,0 +1,15 @@
+﻿@{ Layout = null; }
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Razor</title>
+    <link rel="stylesheet" href="~/dist/bootstrap/css/bootstrap.min.css" />
+</head>
+<body class="m-1 p-1">
+    This is the List view
+    @await Html.PartialAsync("MyPartial")
+    <br />
+    @await Html.PartialAsync("StronglyTypedPartial", new string[] { "one", "two", "three" })
+</body>
+</html>
